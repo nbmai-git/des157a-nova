@@ -4,67 +4,132 @@ body {
     font-style: normal;
     font-family: "Source Code Pro", monospace;
 
-    max-width: 1200px;
+    
     margin: auto;
     text-align: left;
-    background-color: black;
-}
+    background: #7c9e4f;
+    background: linear-gradient(90deg,rgba(124, 158, 79, 1) 
+    0%, rgba(137, 199, 87, 1) 16%, rgba(196, 224, 130, 1) 71%);
+  }
 
 main {
     background-color: rgb(255, 249, 186);
-    max-height: 400px;
- 
+    font-family: "Source Code Pro", monospace;
+    min-height: 400px;
 }
 
-
+a {
+  color: inherit;
+}
 
 
 /*banner img animation attempt */
 
 
-.pop-image {
+.layingcat {
+
+
+  position: absolute;
+
+  margin-top: -50px;
+  margin-left: 250px;
+
+  height: 250px;
   width: 300px;
-  height: auto;
+  
+  animation: falldown 2s ease-in;
+  transition: transform 0.4s ease-in-out;
+}
+
+
+.layingcat:hover {
+  transform: scale(1.2); /* grows by 150% */
+}
+
+
+
+
+
+.cat2 {
+
   border-radius: 8px;
-  
-  /* initial size of graphic */
-  transform: scale(1); 
-  
+  position: absolute;
 
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-left: 10%;
+
+  height: 150px;
+  width: 150px;
+  
+  animation: comeup 2s ease-in forwards;
+  transition: transform 0.4s ease-in-out;
 }
 
 
-.pop-image:hover {
-  transform: scale(1.5); /* grows by 150% */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* drop shadow */
+.cat2:hover {
+  transform: scale(1.2); /* grows by 150% */
 }
 
 
+
+.cat3 {
+
+  border-radius: 8px;
+  position: absolute;
+
+  margin-left: 80%;
+  margin-right: 20%;
+
+  height: 150px;
+  width: 150px;
+  
+  animation: comeup 2s ease-in forwards;
+  transition: transform 0.4s ease-in-out;
+}
+
+
+.cat3:hover {
+  transform: scale(1.2); /* grows by 150% */
+}
 
 /* banner styling */
 
 
-#banner {
-  background-color: rgb(123, 183, 102);
-  color: rgb(123, 183, 102);
-  font-family: "Abril Fatface", serif;
-  font-weight: 400;
-
-  max-height: 250px;
-  max-width: 100%;
-  display: block;
+@keyframes falldown {
+  from {
+    position: absolute;
+    top: -250px;
+  }
+  to {
+    position: absolute;
+    top: 20px;
+  }
 }
 
-#banner img {
 
-  position: absolute;
-  top: 40px;
-  margin-left: 550px;
+@keyframes comeup {
+  from {
+    position: absolute;
+    bottom: -250px;
+  }
+  to {
+    position: absolute;
+    bottom: 0%;
+  }
+}
 
-  height: 150px;
-  width: 150px;
-  /*background-color: aliceblue; */
+
+#banner {
+  background: #7c9e4f;
+  background: linear-gradient(90deg,rgba(124, 158, 79, 1) 0%,
+   rgba(137, 199, 87, 1) 16%, rgba(196, 224, 130, 1) 71%);
+
+  color: rgb(123, 183, 102);
+  /*font-family: "Abril Fatface", serif; */
+  font-weight: 400;
+
+  /*max-height: 250px; */
+  max-width: 100%;
+  display: block;
 }
 
 
@@ -77,14 +142,19 @@ main {
 }
 
 #banner header h1 {
-  font-size: 2.5em;
+  font-size: 1.5em;
   margin-top: 200px;
   color: white;
   text-decoration: none;
 }
 
+#banner header :hover {
+  color: rgb(135, 108, 71);;
+}
+
 .push-right {
   margin-left: auto; /* pushes this item all the way to the right side */
+  font-size: .75rem;
 }
 
 
@@ -99,9 +169,10 @@ main {
     place-items: center;     
     min-height: 400px;
 
-    font-family: "Abril Fatface", serif;
+   /* font-family: "Abril Fatface", serif; */
     font-weight: 400;
-    color: rgb(135, 108, 71);;
+    color: rgb(135, 108, 71);
+
   }
 
 
@@ -111,6 +182,8 @@ main {
     min-height: 200px;
     min-width: 400px;
   }
+
+
 
   .collapsible_table table thead tr th{
     text-align: center;
@@ -126,9 +199,13 @@ main {
     background-color: rgb(255, 255, 255);
   }
 
-  .collapsible_table table tr td p {
+  .collapsible_table table tr td a {
     margin-left: 20px;
     text-align: left
+  }
+
+  li {
+    list-style-type: none;
   }
 
 
@@ -143,13 +220,15 @@ main {
 
 
 
-
-
 footer {
-    height: 50px;
+    /*height: 50px; */
+    padding-top: 20px;
     text-align: center;
     
-    background-color: rgb(123, 183, 102);
+    background: #7c9e4f;
+    background: linear-gradient(90deg,rgba(124, 158, 79, 1) 
+    0%, rgba(137, 199, 87, 1) 16%, rgba(196, 224, 130, 1) 71%);
+
     color: white;
  
 }
