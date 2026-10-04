@@ -15,11 +15,19 @@ body {
 main {
     background-color: rgb(255, 249, 186);
     font-family: "Source Code Pro", monospace;
-    min-height: 400px;
+    height: 400px;
 }
+
 
 a {
   color: inherit;
+}
+
+article {
+  padding: 20px;
+  margin: 0 0 10% 0;
+  color: #7c9e4f;
+  text-decoration: none;
 }
 
 
@@ -27,26 +35,46 @@ a {
 
 
 .layingcat {
-
-
+  
   position: absolute;
 
-  margin-top: -50px;
-  margin-left: 250px;
+  margin-top: 1%;
+  margin-left: 15%;
 
-  height: 250px;
-  width: 300px;
+  height: 200px;
+  width: 240px;
+
+  transition: transform 0.4s ease-in-out;
   
   animation: falldown 2s ease-in;
-  transition: transform 0.4s ease-in-out;
+
 }
 
 
 .layingcat:hover {
-  transform: scale(1.2); /* grows by 150% */
+  transform: scale(1.1); /* grows by 150% */
 }
 
 
+.jumpingcat {
+
+  position: absolute;
+
+  margin-top: 0%;
+  margin-left: 55%;
+
+  height: 200px;
+  width: 400px;
+
+  transition: transform 0.4s ease-in-out;
+  animation: falldown 2s ease-in;
+
+}
+
+
+.jumpingcat:hover {
+  transform: scale(1.1); /* grows by 150% */
+}
 
 
 
@@ -55,10 +83,10 @@ a {
   border-radius: 8px;
   position: absolute;
 
-  margin-left: 10%;
+  margin-left: 5%;
 
-  height: 150px;
-  width: 150px;
+  height: 170px;
+  width: 170px;
   
   animation: comeup 2s ease-in forwards;
   transition: transform 0.4s ease-in-out;
@@ -66,9 +94,8 @@ a {
 
 
 .cat2:hover {
-  transform: scale(1.2); /* grows by 150% */
+  transform: translateY(10px);
 }
-
 
 
 .cat3 {
@@ -76,11 +103,11 @@ a {
   border-radius: 8px;
   position: absolute;
 
-  margin-left: 80%;
-  margin-right: 20%;
+  margin-left: 85%;
+  margin-right: 5%;
 
-  height: 150px;
-  width: 150px;
+  height: 170px;
+  width: 170px;
   
   animation: comeup 2s ease-in forwards;
   transition: transform 0.4s ease-in-out;
@@ -88,10 +115,34 @@ a {
 
 
 .cat3:hover {
-  transform: scale(1.2); /* grows by 150% */
+  transform: translateY(10px);
 }
 
+
 /* banner styling */
+
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 
 
 @keyframes falldown {
@@ -113,7 +164,7 @@ a {
   }
   to {
     position: absolute;
-    bottom: 0%;
+    bottom: -1%;
   }
 }
 
@@ -127,7 +178,7 @@ a {
   /*font-family: "Abril Fatface", serif; */
   font-weight: 400;
 
-  /*max-height: 250px; */
+  max-height: 250px; 
   max-width: 100%;
   display: block;
 }
@@ -149,7 +200,7 @@ a {
 }
 
 #banner header :hover {
-  color: rgb(135, 108, 71);;
+  color: rgb(175, 137, 82);;
 }
 
 .push-right {
@@ -185,7 +236,7 @@ a {
 
 
 
-  .collapsible_table table thead tr th{
+  .collapsible_table table thead tr th {
     text-align: center;
 
     width: 160px;
@@ -207,13 +258,6 @@ a {
   li {
     list-style-type: none;
   }
-
-
-
-
-
-
-
 
 
 
