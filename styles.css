@@ -10,12 +10,14 @@ body {
     background: #7c9e4f;
     background: linear-gradient(90deg,rgba(124, 158, 79, 1) 
     0%, rgba(137, 199, 87, 1) 16%, rgba(196, 224, 130, 1) 71%);
+
+    max-height: 750px;
   }
 
 main {
+    display: block;
     background-color: rgb(255, 249, 186);
     font-family: "Source Code Pro", monospace;
-    height: 400px;
 }
 
 
@@ -25,24 +27,50 @@ a {
 
 article {
   padding: 20px;
-  margin: 0 0 10% 0;
   color: #7c9e4f;
   text-decoration: none;
+  max-width: 1000px;
+  content:center;
 }
+
+article p, article h1, article a {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.backbutton {
+  display: block;
+  color: white;
+  background-color: #7c9e4f;
+  margin-left: auto; 
+  width: 60px;
+
+  margin-left: 80%;
+}
+
+
+.image {
+  margin:auto;
+  display: block;
+  background-color: black;
+  height: 100px;
+  width: 600px;
+}
+
 
 
 /*banner img animation attempt */
 
 
 .layingcat {
-  
+
   position: absolute;
 
   margin-top: 1%;
   margin-left: 15%;
 
-  height: 200px;
-  width: 240px;
+  height: 150px;
+  width: 180px;
 
   transition: transform 0.4s ease-in-out;
   
@@ -63,8 +91,8 @@ article {
   margin-top: 0%;
   margin-left: 55%;
 
-  height: 200px;
-  width: 400px;
+  height: 150px;
+  width: 300px;
 
   transition: transform 0.4s ease-in-out;
   animation: falldown 2s ease-in;
@@ -119,8 +147,6 @@ article {
 }
 
 
-/* banner styling */
-
 
 @keyframes swing {
   0% {
@@ -169,6 +195,8 @@ article {
 }
 
 
+/* banner styling */
+
 #banner {
   background: #7c9e4f;
   background: linear-gradient(90deg,rgba(124, 158, 79, 1) 0%,
@@ -194,7 +222,7 @@ article {
 
 #banner header h1 {
   font-size: 1.5em;
-  margin-top: 200px;
+  margin-top: 150px;
   color: white;
   text-decoration: none;
 }
@@ -215,12 +243,35 @@ article {
 
 
 
+#banner2 header{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;   /* navigation items spacing */
+  margin: auto 30px; /*text space*/
+  /* justify-content: space-around; */
+}
+
+#banner2 header h1 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+#banner2 header :hover {
+  color: rgb(175, 137, 82);;
+}
+
+
+
+
 .collapsible_table {
     display: grid;
     place-items: center;     
     min-height: 400px;
 
    /* font-family: "Abril Fatface", serif; */
+    font-size:smaller;
     font-weight: 400;
     color: rgb(135, 108, 71);
 
@@ -266,6 +317,7 @@ article {
 
 footer {
     /*height: 50px; */
+    display: block;
     padding-top: 20px;
     text-align: center;
     
