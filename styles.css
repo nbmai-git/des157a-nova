@@ -15,7 +15,8 @@ body {
   }
 
 main {
-    display: block;
+    display: flex;
+    justify-content: center;
     background-color: rgb(255, 249, 186);
     font-family: "Source Code Pro", monospace;
 }
@@ -111,7 +112,7 @@ article p, article h1, article a {
   border-radius: 8px;
   position: absolute;
 
-  margin-left: 5%;
+  right: 5%;
 
   height: 170px;
   width: 170px;
@@ -131,8 +132,7 @@ article p, article h1, article a {
   border-radius: 8px;
   position: absolute;
 
-  margin-left: 85%;
-  margin-right: 5%;
+  left: 5%;
 
   height: 170px;
   width: 170px;
@@ -240,7 +240,19 @@ article p, article h1, article a {
 
 
 
+#banner2 {
+  background: #7c9e4f;
+  background: linear-gradient(90deg,rgba(124, 158, 79, 1) 0%,
+   rgba(137, 199, 87, 1) 16%, rgba(196, 224, 130, 1) 71%);
 
+  color: rgb(123, 183, 102);
+  /*font-family: "Abril Fatface", serif; */
+  font-weight: 400;
+
+  max-height: 250px; 
+  max-width: 100%;
+  display: block;
+}
 
 
 #banner2 header{
