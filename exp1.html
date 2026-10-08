@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+ 
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--for mobile formatting-->
+
+   <!--external fonts go before main styles link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <!--main stylesheet link-->
+    <link href = "../styles.css" rel = "stylesheet">  
+
+
+</head>
+
+<body>
+
+    <div id = "banner2">
+
+            <header>
+              <h1><a href="../index.html">NOVA MAI</a></h1>
+              <h1 class="nav-item push-right">DES 157A </h1>
+              <h1>Interactive Media II</h1>
+              <h1>Fall 2026</h1>
+            </header>
+
+    </div>
+
+
+    <main>
+
+
+        <article>
+
+
+            <h1>Experiment 1: Loops and Selection</h1>
+
+            <p>Challenge: Write a program that uses console.log to print all the numbers from 
+                1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead 
+                of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.</p>
+
+
+            <script>
+
+
+                //Sequence, attempt 2 after only printing "buzz" once
+                var number = 100;
+
+
+                // My program is meant to run a loop where numbers are checked if they are divisble
+                //by 3 or 5 (remainder 0), then having a fallback of printing the numbers
+
+                //currently, it is only printing "buzz" once, instead of looping through numbers
+
+            //LOOP
+            for (var i=0; i < 100; i++)  {
+
+                //SELECTION
+                if (number % 3 == 0) {
+                    console.log("Fizz")
+                     }
+                else if (number % 5 == 0){
+                    console.log("Buzz")
+                 } 
+                 else {
+                    console.log(i)
+                 }
+            }
+
+
+            </script>
+
+        </article>
+
+
+
+
+    </main>
+
+     <div class = "cats">
+        <img src="../images/cat.png" alt="A descriptive text of the image"  class="cat3">
+     </div>
+
+
+     <footer> 
+        Designed by Nova Mai
+    </footer>
+
+
+</body>
+
+
+
+
+</html>
