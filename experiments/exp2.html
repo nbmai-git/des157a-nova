@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+ 
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--for mobile formatting-->
+
+   <!--external fonts go before main styles link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <!--main stylesheet link-->
+    <link href = "../styles.css" rel = "stylesheet">  
+
+    <style>
+
+		
+		.blue { color: blue; }
+		.red { color: red; }
+        .green { color: green; }
+        .yellow { color: yellow; }
+		
+	</style>
+
+</head>
+
+<body>
+
+    <div id = "banner2">
+
+            <header>
+              <h1><a href="../index.html">NOVA MAI</a></h1>
+              <h1 class="nav-item push-right">DES 157A </h1>
+              <h1>Interactive Media II</h1>
+              <h1>Fall 2026</h1>
+            </header>
+
+    </div>
+
+
+    <main>
+
+
+        <article>
+
+
+            <h1>Experiment 2: Javescript DOM</h1>
+
+            <p id = textcolor>Challenge: Make the color of this text change depending on user input of a color.</p>
+
+
+            <script>
+
+            //prompts a user for a color, then runs a function that changes the text color based on input
+
+            var color = prompt ("Enter a color (red, green, blue, or yellow)", "");
+
+            function colorchange () {
+            if (color === "red") {
+		    var changecolor = document.querySelector('#textcolor');
+		    changecolor.className = "red";
+            }
+            else if (color === "blue") {
+		    var changecolor = document.querySelector('#textcolor');
+		    changecolor.className = "blue";
+            }
+            else if (color === "green") {
+		    var changecolor = document.querySelector('#textcolor');
+		    changecolor.className = "green";
+            }
+            else {
+                 var changeyellow = document.querySelector('#textcolor');
+		    changecolor.className = "yellow";
+            }
+            console.log("color");
+            }
+
+            colorchange ();
+
+
+            </script>
+
+        </article>
+
+
+
+
+    </main>
+
+     <div class = "cats">
+        <img src="../images/cat.png" alt="A descriptive text of the image"  class="cat3">
+     </div>
+
+
+     <footer> 
+        Designed by Nova Mai
+    </footer>
+
+
+</body>
+
+
+
+
+</html>
