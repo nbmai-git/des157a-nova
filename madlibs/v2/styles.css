@@ -19,6 +19,7 @@ main {
     margin-left: 20px;
 }
 
+
 #madlibstory {
     border: 1px solid grey;
     background-color: white;
@@ -106,3 +107,4 @@ input {
     background-position: 100vw 0; 
   }
 }
+

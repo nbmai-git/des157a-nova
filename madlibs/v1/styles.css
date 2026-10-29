@@ -45,7 +45,6 @@ h1 {
 
 
 input {
-    display: flexbox;
     margin-top: 20px;
 } 
 
@@ -67,7 +66,7 @@ input {
   background-image: url('images/runningcat.png');
   background-repeat: repeat;
   background-position: 0 0;
-  animation: carosel 20s linear infinite; /* Adjust '20s' for speed */
+  animation: carosel 20s linear infinite; 
 }
 
 @keyframes carosel {
@@ -76,6 +75,6 @@ input {
     background-position: 0 0;
   }
   to {
-    background-position: 100vw 0; /* Match your image width for seamless looping */
+    background-position: 100vw 0; 
   }
 }
