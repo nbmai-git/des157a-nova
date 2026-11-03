@@ -15,7 +15,7 @@ let moved = false;
 
 
 // pointer down: start tracking drag position, e is for mouse/event
-character.addEventListener('pointerdown', (event) => {
+character.addEventListener('pointerdown', function(event) {
   dragging = true;
   moved = false;
 
@@ -26,7 +26,7 @@ character.addEventListener('pointerdown', (event) => {
 });
 
 // pointer move: update character position if dragged
-window.addEventListener('pointermove', (event) => {
+window.addEventListener('pointermove', function(event) {
   if (!dragging) return;
 
   const dx = event.clientX - startx;
@@ -45,7 +45,7 @@ window.addEventListener('pointermove', (event) => {
 
 
 // pointer up: end drag and trigger click action if unclicked
-window.addEventListener('pointerup', (event) => {
+window.addEventListener('pointerup', function(event) {
   if (!dragging) return;
   dragging = false;
 
