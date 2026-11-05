@@ -1,0 +1,160 @@
+
+body {
+  margin: 20px auto;
+  /*background-color: #ffffff;*/
+  background-image: url('images/lotus_bg.jpeg');
+  background-size: cover;      
+  background-position: center;  
+  background-repeat: no-repeat; 
+}
+
+main {
+  font-family: monospace;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+
+#description {
+  position: absolute;
+
+  top: 50px;
+  left: 25vw;
+  width: 60vw;
+  max-width: 600px;
+  
+  display: block;
+  background-color: black;
+
+  font-size: medium;
+  color: white;
+   z-index: 1;  
+}
+
+#description p {
+  text-align: center;
+}
+
+
+button {
+  background-color: black;
+  height: 40px;
+  width: 140px;
+  border-radius: 10px;
+
+  margin: 10px;
+
+  font-weight: bold;
+  color: white;
+  z-index: 1; 
+}
+
+button:active {
+  background-color:  rgb(55, 55, 55);
+}
+
+
+footer {
+  position: absolute;
+  bottom: 40px;
+   z-index: 1; 
+}
+
+
+
+/* default visuals upon spawn */
+.character {
+  position: absolute;
+
+  /*how far from the top margin they can spawn*/
+  top: random(20%, 80%);
+  left: random(0%, 90%);
+
+  width: 160px;
+  height: 240px;
+
+  align-items: center;
+  justify-content: center;
+
+  /*lets cursor make a hand when hover*/
+  cursor: grab;
+ 
+
+  background-image: url('images/wigglycat2.gif');
+
+  background-size: cover;      
+  background-position: center;  
+  background-repeat: no-repeat; 
+
+
+}
+
+/*
+randomizes colors and position
+.character:nth-child(4n+1) {  left: 80px; top: 300px;} 
+.character:nth-child(4n+2) {  left: 60px; top: 20px;} 
+.character:nth-child(4n+3) {  left: 200px; top: 200px;} 
+.character:nth-child(4n)   {  left: 120px; top: 100px;} 
+*/
+
+/* for when the cursor is grabbing them */ /*
+.character:active {
+  cursor: grabbing;
+  transform: scale(1.1);
+  background-color: aqua;
+} */
+
+.character.is-dragging {
+  cursor: grabbing;
+  transform: scale(1.1);
+  /*background-color: aqua;*/
+
+  background-image: url('images/wigglycatheld2.gif');
+
+  background-size: cover;      
+  background-position: center;  
+  background-repeat: no-repeat; 
+}
+
+.character.is-dropped {
+   /* background-color: blue;*/
+
+
+  background-image: url('images/wigglycat2.gif');
+
+  background-size: cover;      
+  background-position: center;  
+  background-repeat: no-repeat; 
+}
+
+
+
+
+
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+
+.falling-object {
+  position: absolute;
+  top: -50px;
+  animation: fall 2s linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
