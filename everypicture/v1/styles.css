@@ -84,7 +84,7 @@ footer {
   cursor: grab;
  
 
-  background-image: url('images/wigglycat2.gif');
+  background-image: url('images/wigglycat.gif');
 
   background-size: cover;      
   background-position: center;  
@@ -113,7 +113,7 @@ randomizes colors and position
   transform: scale(1.1);
   /*background-color: aqua;*/
 
-  background-image: url('images/wigglycatheld2.gif');
+  background-image: url('images/wigglycatheld.gif');
 
   background-size: cover;      
   background-position: center;  
@@ -124,7 +124,7 @@ randomizes colors and position
    /* background-color: blue;*/
 
 
-  background-image: url('images/wigglycat2.gif');
+  background-image: url('images/wigglycat.gif');
 
   background-size: cover;      
   background-position: center;  
