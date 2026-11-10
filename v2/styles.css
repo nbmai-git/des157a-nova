@@ -1,0 +1,121 @@
+
+body {
+      margin: 0;
+      /*height: 100vh;*/
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #2b2b2b;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      font-family: sans-serif;
+}
+
+
+#description {
+  position: absolute;
+
+  top: 50px;
+  left: 25vw;
+  width: 60vw;
+  max-width: 600px;
+  
+  display: block;
+  background-color: black;
+
+  font-size: medium;
+  color: white;
+   z-index: 1;  
+}
+
+.bg-container {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+  position: relative;
+}
+
+
+main {
+  font-family: monospace;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #010101;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+#spawn-btn:hover {
+    background-color: #2b2b2b;
+}
+
+
+.character {
+    position:absolute;
+    top: random(20%, 80%);
+    left: random(0%, 90%);
+
+     width: 10vw;
+     max-width: 100px;
+     aspect-ratio: 4 / 9;
+   /* width: 12vw;
+    height: 30vw; */
+    align-items: center;
+    justify-content: center;
+    
+
+  /*lets cursor make a hand when hover*/
+    cursor: grab;
+    background-image: url('images/wigglycat-ezgif.com-crop.gif');
+    background-size: cover;      
+    background-position: center;  
+    background-repeat: no-repeat;
+
+}
+
+.character:nth-child(4n + 2) {  transform: scaleX(-1); width: 8vw;}
+.character:nth-child(4n + 4) {  transform: scaleX(-1); width: 8vw;}
+
+
+.character.is-dragging {
+    cursor: grabbing;
+
+    background-image: url('images/wigglypaintcatheld1-ezgif.com-crop.gif');
+    align-items: center;
+    justify-content: center;
+  
+    background-size: cover;      
+    background-position: center;  
+    background-repeat: no-repeat; 
+}
+
+.character:nth-child(4n + 2) {  transform: scaleX(-1); }
+.character:nth-child(4n + 4) {  transform: scaleX(-1); }
+
+
+
+
+footer {
+    position: absolute;
+    bottom: 40px;
+    z-index: 1; 
+}
