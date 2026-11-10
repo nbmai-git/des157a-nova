@@ -12,12 +12,6 @@ body {
       font-family: sans-serif;
 }
 
-/*
-    body:after{
-    display:none;
-    content: url(lotusmana/1.jpeg) url(lotusmana/2.jpeg) url(lotusmana/3.jpeg) url(lotusmana/4.jpeg);
-    }
-*/
 
 #description {
   position: absolute;

@@ -4,10 +4,10 @@
     //background image changes
     // list the paths to your images inside the folder
     const images = [
-      'lotusmana/1.jpeg',
-      'lotusmana/2.jpeg',
-      'lotusmana/3.jpeg',
-      'lotusmana/4.jpeg'
+      'lotusmana/1.webp',
+      'lotusmana/2.webp',
+      'lotusmana/3.webp',
+      'lotusmana/4.webp'
     ];
 
     let currentIndex = 0;
