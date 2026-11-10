@@ -1,6 +1,13 @@
 
 (function(){
-        
+    "use strict";
+    console.log("reading js");
+    
+  const clearButton = document.getElementById('clear-btn');
+  clearButton.addEventListener('click', () => {
+    document.querySelectorAll('.character').forEach(el => el.remove());
+  });
+
     //background image changes
     // list the paths to your images inside the folder
     const images = [
